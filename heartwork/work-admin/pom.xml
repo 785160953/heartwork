@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>im.heart</groupId>
 		<artifactId>heartwork</artifactId>
-		<version>0.5.1</version>
+		<version>0.5.5</version>
 	</parent>
 	<artifactId>work-admin</artifactId>
 	<name>work-admin</name>
@@ -41,11 +41,13 @@
 			<artifactId>work-rpt</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		<!-- <dependency> <groupId>im.heart</groupId> <artifactId>work-cms</artifactId> 
+		<dependency>
+			<groupId>im.heart</groupId>
+			<artifactId>work-cms</artifactId>
+			<version>${project.version}</version>
+		</dependency><!-- <dependency> <groupId>im.heart</groupId> <artifactId>work-websocket</artifactId> 
 			<version>${project.version}</version> </dependency> <dependency> <groupId>im.heart</groupId> 
-			<artifactId>work-websocket</artifactId> <version>${project.version}</version> 
-			</dependency> <dependency> <groupId>im.heart</groupId> <artifactId>work-msg</artifactId> 
-			<version>${project.version}</version> </dependency> -->
+			<artifactId>work-msg</artifactId> <version>${project.version}</version> </dependency> -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -58,7 +60,9 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<configuration><!-- <warName>${project.artifactId}</warName> -->
+				<version>3.2.0</version>
+				<configuration>
+					<warName>${project.artifactId}</warName>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
